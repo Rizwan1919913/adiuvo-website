@@ -1,225 +1,225 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adiuvo Consultants Pakistan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adiuvo Consultants — Current State Analysis</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-      color: #333;
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#555b66;
+      --accent:#0b62a4; /* deep blue heading color chosen to match professional consultancy feel */
+      --accent-2:#0f8bdc;
+      --panel:#f7f9fb;
+      --border:#e6eef8;
+      --serif: Georgia, 'Times New Roman', Times, serif;
+      --sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
-    header {
-      background: #003366;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    header p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-    section {
-      background: white;
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 6px;
-    }
-    h3 {
-      margin-top: 20px;
-      color: #004080;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .dashboard, .swot {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-    }
-    .card {
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 15px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-    a {
-      color: #0066cc;
-    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.45}
+    .container{max-width:1100px;margin:36px auto;padding:28px;background:linear-gradient(180deg,var(--panel),#fff);box-shadow:0 6px 20px rgba(16,30,56,0.06);border-radius:10px;border:1px solid var(--border)}
+    header{display:flex;align-items:flex-start;gap:20px}
+    .brand{flex:1}
+    .brand h1{margin:0;font-family:var(--serif);font-size:28px;color:var(--accent);letter-spacing:0.5px}
+    .brand p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .contact{font-size:14px;text-align:right}
+    .contact .name{font-weight:700}
+    nav{margin-top:16px;border-top:1px dashed var(--border);padding-top:14px}
+    nav a{margin-right:14px;color:var(--accent-2);text-decoration:none;font-weight:600}
+
+    main{margin-top:22px}
+    h2{color:var(--accent);margin:26px 0 12px;font-size:20px;text-transform:uppercase;letter-spacing:0.8px}
+    h3{color:var(--accent-2);margin:18px 0 10px;font-size:16px}
+    p{margin:10px 0;color:var(--muted)}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:28px}
+    .panel{background:#fff;padding:18px;border-radius:8px;border:1px solid var(--border)}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+    .stat{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:8px;border:1px solid var(--border);text-align:center}
+    .stat .num{font-size:20px;color:var(--accent);font-weight:700}
+    .swot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+    .swot .box{background:#fff;padding:12px;border-radius:6px;border:1px solid var(--border);min-height:120px}
+    pre{white-space:pre-wrap;font-family:inherit;background:transparent;padding:0}
+    footer{margin-top:28px;padding-top:12px;border-top:1px dashed var(--border);color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:900px){.two-col{grid-template-columns:1fr} .stat-grid{grid-template-columns:repeat(2,1fr)} .swot{grid-template-columns:repeat(2,1fr)}}
+
+    /* styling for headings that mirror the Word doc's uppercase heavy style */
+    .huge-heading{font-family:var(--serif);font-size:32px;color:var(--accent);text-transform:uppercase;margin:14px 0}
+    .uppercase{text-transform:uppercase;font-weight:700;color:var(--accent)}
+
+    /* subtle typographic flourishes */
+    .muted-small{color:var(--muted);font-size:13px}
+    .bullet{margin-left:14px}
   </style>
 </head>
 <body>
-  <header>
-    <h1>Adiuvo Consultants Pakistan</h1>
-    <p>Business Analytics | Consultancy | Education Support</p>
-  </header>
-
-  <section id="introduction">
-    <h2>Introduction</h2>
-    <p>Adiuvo is a professional educational consultancy firm that not only aims to provide its expertise in overseas educational services but also provides students language courses.</p>
-    <p>Work with Adiuvo Consultant to navigate the complex immigration process. Our expert advice will help you make informed decisions for a smooth transition to your new home.</p>
-    <p>We also provide assistance in securing work visas for international career opportunities and offer comprehensive support for employers and employees.</p>
-    <p>Ensuring all your documentation is in order and compliant with immigration laws, we provide personalized consultations to address all your immigration-related queries and concerns, with expert advice tailored to your unique situation.</p>
-  </section>
-
-  <section id="engagement">
-    <h2>Client Engagement and Information Extraction</h2>
-    <p>Adiuvo offers a suite of administrations planned to enhance client services and streamline data extraction, especially in the property management sector.</p>
-    <h3>Client Administration Solutions</h3>
-    <ul>
-      <li><strong>24/7 Property Management Support:</strong> Continuous support for property managers, including out-of-hours emergency call handling.</li>
-      <li><strong>Maintenance & Warranty Desks:</strong> Comprehensive management of all maintenance tasks, reports, and contractor coordination.</li>
-    </ul>
-    <h3>Data Extraction Tools</h3>
-    <p><strong>Eve – AI-Powered Report Assistant:</strong> Capable of extracting data from complex reports such as lease agreements, financial records, and support logs.</p>
-  </section>
-
-  <section id="methods">
-    <h2>Mixed Methods Research Approach</h2>
-    <p>The analysis combined both qualitative and quantitative approaches. Secondary data, customer feedback, and industry reports helped overcome gaps caused by limited stakeholder access and proprietary restrictions.</p>
-    <p>Website analytics revealed key insights including:</p>
-    <ul>
-      <li>Total visits decreased by <strong>18.66%</strong>.</li>
-      <li>Unique visitors dropped by <strong>32.5%</strong>.</li>
-      <li>Average pages per visit increased by <strong>18.69%</strong> to 6.75.</li>
-      <li>Bounce rate decreased by <strong>62.34%</strong> to 16.01%.</li>
-      <li>Average session duration: 4:43 minutes (-15.27%).</li>
-      <li>Organic traffic grew <strong>6.56%</strong> to 25.7K visitors.</li>
-    </ul>
-  </section>
-
-  <section id="findings">
-    <h2>Key Findings: Pressure Points, Pain Points and Gaps</h2>
-    <h3>Pressure Points</h3>
-    <ul>
-      <li>Rising competition from large-scale ethical brands (e.g., Starbucks Reserve, Blue Bottle).</li>
-      <li>Supply chain unpredictability due to climate change, labor shortages, and rising commodity costs.</li>
-      <li>Need for digital transformation including analytics, CRM, and automation systems.</li>
-    </ul>
-    <h3>Pain Points</h3>
-    <ul>
-      <li>Mismatch between brand mission visibility and customer perception.</li>
-      <li>Declining website visitors despite strong Instagram presence (177K followers).</li>
-      <li>High customer acquisition costs due to saturated digital marketing.</li>
-    </ul>
-    <h3>Gaps</h3>
-    <ul>
-      <li>Verbal abuse against customer service staff needs addressing.</li>
-      <li>Out-of-hours service frequently handles lift breakdowns (17.92%), access issues (16.43%), leaks (15.92%), electrical faults (8.37%), heating/water issues (10.13%).</li>
-      <li>Better customer education on property basics could reduce emergencies.</li>
-    </ul>
-  </section>
-
-  <section id="swot">
-    <h2>SWOT Analysis</h2>
-    <div class="swot">
-      <div class="card">
-        <h3>Strengths</h3>
-        <ul>
-          <li>20% of profits donated to animal rescue.</li>
-          <li>177K+ Instagram followers (high loyalty).</li>
-          <li>Premium ethical products.</li>
-          <li>Recognized niche brand with top keyword rankings.</li>
-        </ul>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <h1>Adiuvo Consultants Pakistan</h1>
+        <p class="muted-small">MA Business Analytics — Individual consultancy and project</p>
       </div>
-      <div class="card">
-        <h3>Weaknesses</h3>
-        <ul>
-          <li>Underutilized customer analytics.</li>
-          <li>Manual fulfillment processes reduce scalability.</li>
-          <li>Declining unique visitors and reduced keyword footprint.</li>
-        </ul>
+      <div class="contact">
+        <div class="name">Imran Ali Akbar</div>
+        <div class="muted-small">Director — Adiuvo Consultants</div>
+        <div style="margin-top:10px;font-weight:700;color:var(--accent)">+92 332 4010778</div>
       </div>
-      <div class="card">
-        <h3>Opportunities</h3>
-        <ul>
-          <li>Subscription model expansion.</li>
-          <li>AI-driven logistics & CRM integration.</li>
-          <li>Personalized marketing & targeting.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Threats</h3>
-        <ul>
-          <li>Competition from large ethical brands.</li>
-          <li>Supply chain volatility.</li>
-          <li>Rising digital marketing costs in saturated markets.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="dashboard">
-    <h2>Dashboard (Performance Snapshot)</h2>
-    <div class="dashboard">
-      <div class="card"><strong>Total Visits:</strong> 21.7K (-18.66%)</div>
-      <div class="card"><strong>Unique Visitors:</strong> 13.9K (-32.5%)</div>
-      <div class="card"><strong>Pages per Visit:</strong> 6.75 (+18.69%)</div>
-      <div class="card"><strong>Bounce Rate:</strong> 16.01% (-62.34%)</div>
-      <div class="card"><strong>Avg. Duration:</strong> 4:43 (-15.27%)</div>
-      <div class="card"><strong>Organic Traffic:</strong> 25.7K (+6.56%)</div>
-      <div class="card"><strong>Organic Keywords:</strong> 11.9K (-47.75%)</div>
-    </div>
-  </section>
+    <nav>
+      <a href="#introduction">INTRODUCTION</a>
+      <a href="#client-engagement">CLIENT ENGAGEMENT</a>
+      <a href="#research">RESEARCH APPROACH</a>
+      <a href="#findings">KEY FINDINGS</a>
+      <a href="#swot">SWOT</a>
+      <a href="#dashboard">DASHBOARD</a>
+      <a href="#references">REFERENCES</a>
+    </nav>
 
-  <section id="ethics">
-    <h2>Ethical Considerations</h2>
-    <p>Adiuvo Consultants Pakistan must maintain strong ethical standards to preserve credibility and ensure student success. Key principles include:</p>
-    <ul>
-      <li>Transparency in admissions, visa policies, and scholarships.</li>
-      <li>Fair and impartial guidance for students.</li>
-      <li>Data privacy and protection of sensitive student information.</li>
-      <li>Honest marketing practices without misleading promises.</li>
-      <li>Reasonable consultancy fees, avoiding unnecessary add-ons.</li>
-      <li>Compliance with local and international education/migration laws.</li>
-      <li>Partnership with accredited institutions only.</li>
-    </ul>
-  </section>
+    <main>
+      <section id="introduction">
+        <h2>INTRODUCTION</h2>
+        <div class="two-col">
+          <div>
+            <div class="panel">
+              <p><strong>Adiuvo</strong> is a professional educational consultancy firm that not only aims to provide its expertise in overseas educational services but also provides students language courses.</p>
 
-  <section id="summary">
-    <h2>Analysis Summary</h2>
-    <p>Established in 2015, Adiuvo Consultants is a Pakistan-based education consultancy firm specializing in overseas admissions and language training. With offices in Lahore, Islamabad, and Multan, the company provides comprehensive support throughout the admission and study process abroad.</p>
-    <p><strong>Strengths:</strong> Established reputation, geographical presence, diverse services, proven success stories, and student-centric approach.</p>
-    <p><strong>Challenges:</strong> Limited digital presence, competition from other consultancies, changing admission requirements.</p>
-    <p><strong>Opportunities:</strong> Expansion to more cities, increasing awareness, and student guidance programs.</p>
-  </section>
+              <p>Work with <strong>ADIUVO CONSULTANT</strong> to navigate the complex immigration process. Our expert advice will help you make informed decisions for a smooth transition to your new home.</p>
 
-  <section id="references">
-    <h2>References</h2>
-    <ul>
-      <li><a href="https://www.adiuvoconsultancy.com/">Adiuvo Consultancy</a></li>
-      <li>Al-Sulaiti, A., Mansour, M., Al-Yafei, H., Aseel, S., Kucukvar, M., & Onat, N. (2021). Engineering, Procurement, and Construction Project’s performance assessment. IEEE.</li>
-      <li>Bauerove, R., Halaika, M., & Koivova, V. (2025). User experience with virtual reality.</li>
-      <li>Cruz-Suarez, A., Martinez-Navalon, I., Gelashvili, V., & Herrera-Enriquez, O. (2022). Creativity and Innovation in Technology.</li>
-      <li>Kane, G. C., Palmer, D., Phillips, A. N., Kiron, D., & Buckley, N. (2015). Strategy, not technology, drives digital transformation. MIT Sloan Review.</li>
-      <li>Chaffey, D., & Ellis-Chadwick, F. (2019). Digital Marketing (7th ed.). Pearson Education.</li>
-    </ul>
-  </section>
+              <ul class="bullet">
+                <li>Assistance in securing work visas for international career opportunities.</li>
+                <li>Comprehensive support for employers and employees.</li>
+                <li>Ensuring all your documentation is in order and compliant with immigration laws.</li>
+                <li>Personalized consultations to address all your immigration-related queries and concerns.</li>
+                <li>Expert advice tailored to your unique situation.</li>
+              </ul>
+            </div>
 
-  <footer>
-    <p>&copy; 2025 Adiuvo Consultants Pakistan. All rights reserved.</p>
-  </footer>
+            <h2 id="client-engagement">CLIENT ENGAGEMENT AND INFORMATION EXTRACTION</h2>
+            <div class="panel">
+              <p>Adiuvo offers a suite of administrations planned to upgrade client administration and streamline data extraction, especially inside the property administration division.</p>
+
+              <h3>Client Administration Arrangements</h3>
+              <p>24/7 Property Administration Bolster: Adiuvo conveys ceaseless bolster to property supervisors, guaranteeing consistent operations and increased client fulfillment. Their administrations incorporate out-of-hours crisis call dealing with, where prepared experts survey circumstances and facilitate fitting reactions, giving peace of intellect to both property supervisors and inhabitants.</p>
+
+              <h3>Support and Guarantee Work areas</h3>
+              <p>They offer comprehensive administration of all upkeep errands, both receptive and arranged. This incorporates guideline and directing temporary workers, as well as giving nitty gritty reports with pictures, recordings, and cites.</p>
+
+              <h3>Data Extraction Instruments</h3>
+              <p><strong>Eve — AI-Powered Report Assistant:</strong> Adiuvo has created 'Eve,' an AI-driven right hand able of extricating information from complex reports. Eve interatomic utilizing common dialect preparing to handle rent understandings, money related reports, support logs, and more, guaranteeing that basic data is promptly open.</p>
+
+              <p>Through stakeholder mapping researchers obtained vital information about main stakeholders ranging from operational personnel to rescue organizations and sociable media influencers and customers. The approach proved invaluable for comparing consumer needs between those who aligned with the company mission versus those focused only on product quality.</p>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <h3>Contact & Project</h3>
+            <p class="muted-small">Student id: <strong>23080380</strong></p>
+            <p class="muted-small">Project: Current State Analysis — A strategic overview of operational and market challenges faced by Adiuvo consultants</p>
+
+            <div style="margin-top:12px">
+              <h3 style="margin:6px 0">Quick stats</h3>
+              <div class="stat-grid">
+                <div class="stat"><div class="num">21.7K</div><div class="muted-small">Total Visits</div></div>
+                <div class="stat"><div class="num">13.9K</div><div class="muted-small">Unique Visitors</div></div>
+                <div class="stat"><div class="num">25.7K</div><div class="muted-small">Organic Traffic</div></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>MIXED METHODS RESEARCH APPROACH</h2>
+        <div class="panel">
+          <p>The acquired data contained significant depth yet produced some constraints during the process. The proprietary nature of Grounds & Hounds restricts them from publishing comprehensive financial records thus limiting quantitative evaluation of their operation. The analysis faced challenges when it became impossible to meet with essential stakeholders including logistics partners. Secondary data from public sources and customer feedback combined with industry reports enabled the researcher to overcome analysis limitations.</p>
+
+          <p>The research team employed methodological approaches of quantitative nature to both substantiate and build upon prior observations. Data from website analytics revealed a marked reduction of <strong>18.66%</strong> in total visits together with a decreased number <strong>32.5%</strong> unique visitors since customer acquisition weakened. Performance quality improved alongside increased average pages per visit (<strong>6.75</strong>) by <strong>18.69%</strong> while the bounce rate decreased remarkably by <strong>62.34%</strong>.</p>
+
+          <p>Organic traffic demonstrated growth of <strong>6.56%</strong> to reach <strong>25.7K</strong> visitors during the analyzed time period but the number of organic keywords decreased by <strong>47.75%</strong>.</p>
+        </div>
+      </section>
+
+      <section id="findings">
+        <h2>KEY FINDINGS: PRESSURE POINTS, PAIN POINTS AND GAPS</h2>
+        <div class="panel">
+          <p>The analysis of Adiuvo Consultants current situation reveals various challenges which span between strategic matters and operational activities and market-facing elements.</p>
+
+          <h3>Pressure Points</h3>
+          <p>Members of the ethical and specialty consultancy market face rising competition as Adiuvo Consultants continues business activities. Through extensive financial capabilities and well-organized distribution systems larger brands duplicate sustainable messaging at scale.</p>
+
+          <h3>Pain Points</h3>
+          <p>The internal challenge involves a mismatch between the way the brand presents itself through visibility and how it enacts its social mission activities. Semrush data shows website visitor decline reached <strong>32.5%</strong> but Instagram social media activity holds strong with <strong>177K</strong> followers.</p>
+
+          <h3>Gaps</h3>
+          <p>Overseeing Client Benefit Specialist Mishandle, Handling Common Out-of-Hours Issues (including lift breakdowns, access issues, spills, electrical issues, heating/hot water), and Upgrading Client Communication and Instruction are all gaps identified that Adiuvo can address.</p>
+        </div>
+      </section>
+
+      <section id="swot">
+        <h2>SWOT MATRIX</h2>
+        <div class="swot">
+          <div class="box"><strong>STRENGTH</strong>
+            <ul class="bullet">
+              <li>Animal rescue (20% of profits donated)</li>
+              <li>High brand loyalty with 177K+ Instagram followers</li>
+              <li>Premium product quality and ethical sourcing practices</li>
+            </ul>
+          </div>
+          <div class="box"><strong>OPPORTUNITY</strong>
+            <ul class="bullet">
+              <li>Subscription model expansion and retention strategies</li>
+              <li>AI-driven logistics and CRM integration</li>
+              <li>Personalised marketing and behavioural targeting</li>
+            </ul>
+          </div>
+          <div class="box"><strong>WEAKNESS</strong>
+            <ul class="bullet">
+              <li>Underutilised customer analytics and segmentation</li>
+              <li>Manual fulfilment processes affecting scalability</li>
+              <li>Declining unique visitors and reduced keyword footprint</li>
+            </ul>
+          </div>
+          <div class="box"><strong>THREAT</strong>
+            <ul class="bullet">
+              <li>Competitive pressure from larger ethical brands</li>
+              <li>Supply chain volatility</li>
+              <li>Rising digital marketing costs and CAC</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard">
+        <h2>DASHBOARD — Current State Performance</h2>
+        <div class="panel">
+          <div class="stat-grid">
+            <div class="stat"><div class="num">8</div><div class="muted-small">Brand Visibility</div></div>
+            <div class="stat"><div class="num">6</div><div class="muted-small">Supply Chain Efficiency</div></div>
+            <div class="stat"><div class="num">4</div><div class="muted-small">E-commerce Personalisation</div></div>
+          </div>
+
+          <h3 style="margin-top:18px">Performance Proxies</h3>
+          <p>Page Per Visit: <strong>6.75</strong> (Change: +18.69%) — Bounce Rate: <strong>16.01%</strong> (Change: -62.34%) — Avg Visit Duration: <strong>4:43</strong> (Change: -15.27%)</p>
+
+          <p class="muted-small">Organic Keywords: <strong>11.9K</strong> (Change: -47.75%)</p>
+        </div>
+      </section>
+
+      <section id="references">
+        <h2>REFERENCES</h2>
+        <div class="panel">
+          <p class="muted-small">Primary website: https://www.adiuvoconsultancy.com/</p>
+          <p class="muted-small">Other references cited within the project: Academic and industry sources listed in the original document.</p>
+        </div>
+      </section>
+
+      <footer>
+        <div>Exported from the uploaded Word document and converted into an HTML page for presentation and web delivery.</div>
+        <div style="margin-top:6px" class="muted-small">Student id: 23080380 — Adiuvo Consultants Pakistan</div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
